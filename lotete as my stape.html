@@ -1,0 +1,1283 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Citizen Voice Rwanda - Tumusime Enock</title>
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+```css
+/* ==========================================
+   TUMUSIME ENOCK MOVING WATERMARK
+========================================== */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* WATERMARK */
+
+body::before {
+
+    content: "TUMUSIME ENOCK";
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    /* Put the name in the center */
+    transform: translate(-50%, -50%) rotate(-25deg);
+
+    font-size: 70px;
+    font-weight: 900;
+
+    color: rgba(18, 60, 115, 0.13);
+
+    white-space: nowrap;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    /* THE IMPORTANT PART */
+    animation: moveEnock 4s ease-in-out infinite;
+}
+
+
+/* ==========================================
+   MOVE UP AND DOWN
+========================================== */
+
+@keyframes moveEnock {
+
+    0% {
+        top: 20%;
+    }
+
+    50% {
+        top: 80%;
+    }
+
+    100% {
+        top: 20%;
+    }
+
+}
+
+
+/* ==========================================
+   KEEP WEBSITE ABOVE WATERMARK
+========================================== */
+
+header,
+nav,
+.container,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    body::before {
+
+        font-size: 38px;
+
+        animation: moveEnockMobile 4s ease-in-out infinite;
+    }
+
+}
+
+
+@keyframes moveEnockMobile {
+
+    0% {
+        top: 25%;
+    }
+
+    50% {
+        top: 75%;
+    }
+
+    100% {
+        top: 25%;
+    }
+
+}
+```
+
+
+@keyframes enockMove {
+
+    0% {
+        transform: rotate(-25deg) translateY(-40px);
+    }
+
+    50% {
+        transform: rotate(-25deg) translateY(40px);
+    }
+
+    100% {
+        transform: rotate(-25deg) translateY(-40px);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body::before {
+
+        font-size: 35px;
+
+        line-height: 120px;
+
+        animation:
+            enockMoveMobile 5s ease-in-out infinite;
+    }
+
+
+    @keyframes enockMoveMobile {
+
+        0% {
+            transform:
+                rotate(-25deg)
+                translateY(-25px);
+        }
+
+        50% {
+            transform:
+                rotate(-25deg)
+                translateY(25px);
+        }
+
+        100% {
+            transform:
+                rotate(-25deg)
+                translateY(-25px);
+        }
+
+    }
+
+}
+```
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #123c73;
+    color: blue;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: #0d2d55;
+    padding: 14px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    margin: 5px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav button:hover {
+    color: #ffd43b;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #123c73;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #555;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.96);
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    color: #123c73;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin: 8px 0 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #123c73;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.submit {
+
+    background: #087f5b;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 22px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.submit:hover {
+    background: #056b4c;
+}
+
+
+/* =========================
+   QUESTIONS
+========================= */
+
+.question {
+
+    border-left: 5px solid #123c73;
+
+    background: #f8fafc;
+
+    padding: 18px;
+
+    margin-top: 15px;
+
+    border-radius: 6px;
+}
+
+.question h3 {
+    color: #123c73;
+    margin-bottom: 10px;
+}
+
+.question p {
+    margin: 7px 0;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+}
+
+.pending {
+
+    background: #fff3cd;
+
+    color: #856404;
+}
+
+.answered {
+
+    background: #d4edda;
+
+    color: #155724;
+}
+
+.escalated {
+
+    background: #f8d7da;
+
+    color: #721c24;
+}
+
+
+/* =========================
+   ANSWER
+========================= */
+
+.answer {
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+    background: #eaf7ef;
+
+    border-radius: 7px;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #123c73;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    nav button {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    body::before {
+        font-size: 35px;
+        line-height: 120px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>🇷🇼 Citizen Voice Rwanda</h1>
+
+    <p>
+        Ask questions. Get answers. Make leaders accountable.
+    </p>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <button onclick="showPage('citizen')">
+        Citizen
+    </button>
+
+    <button onclick="showPage('leader')">
+        Leader Dashboard
+    </button>
+
+    <button onclick="showPage('about')">
+        About
+    </button>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- =========================
+     CITIZEN PAGE
+========================= -->
+
+<section id="citizen">
+
+    <div class="hero">
+
+        <h2>
+            Speak Directly to Your Leader
+        </h2>
+
+        <p>
+            Citizens can submit questions and follow
+            the progress of their questions.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Ask Your Question
+        </h2>
+
+
+        <input
+            type="text"
+            id="citizenName"
+            placeholder="Your name"
+        >
+
+
+        <input
+            type="text"
+            id="location"
+            placeholder="District / Sector"
+        >
+
+
+        <select id="leader">
+
+            <option value="">
+                Choose a leader
+            </option>
+
+            <option value="Sector Leader">
+                Sector Leader
+            </option>
+
+            <option value="Cell Leader">
+                Cell Leader
+            </option>
+
+            <option value="District Mayor">
+                District Mayor
+            </option>
+
+            <option value="Minister">
+                Minister
+            </option>
+
+        </select>
+
+
+        <textarea
+            id="question"
+            placeholder="Write your question..."
+        ></textarea>
+
+
+        <button
+            class="submit"
+            onclick="submitQuestion()">
+
+            Submit Question
+
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Submitted Questions
+        </h2>
+
+        <div id="questionList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LEADER DASHBOARD
+========================= -->
+
+<section
+    id="leader"
+    class="hidden">
+
+    <div class="card">
+
+        <h2>
+            Leader Dashboard
+        </h2>
+
+        <p>
+            Questions waiting for a response:
+        </p>
+
+        <div id="leaderQuestions"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    id="about"
+    class="hidden">
+
+    <div class="card">
+
+        <h2>
+            About Citizen Voice
+        </h2>
+
+        <p>
+            Citizen Voice is a digital platform designed
+            to connect citizens with their leaders.
+        </p>
+
+        <br>
+
+        <p>
+            A citizen can submit a question to the
+            responsible leader.
+        </p>
+
+        <br>
+
+        <p>
+            The leader can respond through the dashboard.
+        </p>
+
+        <br>
+
+        <p>
+            If the leader does not respond within the
+            allowed period, the question can be escalated
+            to a higher level of leadership.
+        </p>
+
+        <br>
+
+        <h3>
+            Website Creator
+        </h3>
+
+        <p>
+            <strong>Tumusime Enock</strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Citizen Voice Rwanda
+    </p>
+
+    <p>
+        Created by Tumusime Enock
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   QUESTIONS DATABASE
+========================= */
+
+let questions =
+    JSON.parse(
+        localStorage.getItem("questions")
+    ) || [];
+
+
+
+/* =========================
+   CHANGE PAGE
+========================= */
+
+function showPage(page) {
+
+    document
+        .getElementById("citizen")
+        .classList.add("hidden");
+
+    document
+        .getElementById("leader")
+        .classList.add("hidden");
+
+    document
+        .getElementById("about")
+        .classList.add("hidden");
+
+
+    document
+        .getElementById(page)
+        .classList.remove("hidden");
+
+
+    if (page === "citizen") {
+
+        displayQuestions();
+
+    }
+
+
+    if (page === "leader") {
+
+        displayLeaderQuestions();
+
+    }
+
+}
+
+
+
+/* =========================
+   SUBMIT QUESTION
+========================= */
+
+function submitQuestion() {
+
+    const name =
+        document
+        .getElementById("citizenName")
+        .value
+        .trim();
+
+
+    const location =
+        document
+        .getElementById("location")
+        .value
+        .trim();
+
+
+    const leader =
+        document
+        .getElementById("leader")
+        .value;
+
+
+    const question =
+        document
+        .getElementById("question")
+        .value
+        .trim();
+
+
+    if (
+        !name ||
+        !location ||
+        !leader ||
+        !question
+    ) {
+
+        alert(
+            "Please fill in all fields."
+        );
+
+        return;
+    }
+
+
+    const newQuestion = {
+
+        id: Date.now(),
+
+        name: name,
+
+        location: location,
+
+        leader: leader,
+
+        question: question,
+
+        answer: "",
+
+        status: "Pending",
+
+        created: Date.now()
+
+    };
+
+
+    questions.push(newQuestion);
+
+
+    saveQuestions();
+
+
+    alert(
+        "Your question has been submitted successfully!"
+    );
+
+
+    document
+        .getElementById("citizenName")
+        .value = "";
+
+
+    document
+        .getElementById("location")
+        .value = "";
+
+
+    document
+        .getElementById("leader")
+        .value = "";
+
+
+    document
+        .getElementById("question")
+        .value = "";
+
+
+    displayQuestions();
+
+}
+
+
+
+/* =========================
+   DISPLAY QUESTIONS
+========================= */
+
+function displayQuestions() {
+
+    const list =
+        document.getElementById(
+            "questionList"
+        );
+
+
+    list.innerHTML = "";
+
+
+    if (questions.length === 0) {
+
+        list.innerHTML =
+            "<p>No questions have been submitted yet.</p>";
+
+        return;
+
+    }
+
+
+    questions.forEach(q => {
+
+        list.innerHTML += `
+
+        <div class="question">
+
+            <h3>
+                ${q.leader}
+            </h3>
+
+            <p>
+                <strong>Citizen:</strong>
+                ${q.name}
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                ${q.location}
+            </p>
+
+            <p>
+                <strong>Question:</strong>
+                ${q.question}
+            </p>
+
+            <span
+                class="status ${getStatusClass(q.status)}">
+
+                ${q.status}
+
+            </span>
+
+
+            ${
+                q.answer
+
+                ?
+
+                `<div class="answer">
+
+                    <strong>
+                        Leader's Answer:
+                    </strong>
+
+                    ${q.answer}
+
+                </div>`
+
+                :
+
+                ""
+
+            }
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+
+/* =========================
+   LEADER DASHBOARD
+========================= */
+
+function displayLeaderQuestions() {
+
+    const list =
+        document.getElementById(
+            "leaderQuestions"
+        );
+
+
+    list.innerHTML = "";
+
+
+    if (questions.length === 0) {
+
+        list.innerHTML =
+            "<p>No questions available.</p>";
+
+        return;
+
+    }
+
+
+    questions.forEach(q => {
+
+        list.innerHTML += `
+
+        <div class="question">
+
+            <h3>
+                ${q.leader}
+            </h3>
+
+            <p>
+
+                <strong>
+                    From:
+                </strong>
+
+                ${q.name}
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Question:
+                </strong>
+
+                ${q.question}
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Status:
+                </strong>
+
+                ${q.status}
+
+            </p>
+
+
+            ${
+                q.status !== "Answered"
+
+                ?
+
+                `
+
+                <textarea
+                    id="answer-${q.id}"
+                    placeholder="Write your answer..."
+                ></textarea>
+
+
+                <button
+                    class="submit"
+                    onclick="answerQuestion(${q.id})">
+
+                    Answer Question
+
+                </button>
+
+                `
+
+                :
+
+                `
+
+                <div class="answer">
+
+                    <strong>
+                        Answer:
+                    </strong>
+
+                    ${q.answer}
+
+                </div>
+
+                `
+
+            }
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+
+/* =========================
+   ANSWER QUESTION
+========================= */
+
+function answerQuestion(id) {
+
+    const question =
+        questions.find(
+            q => q.id === id
+        );
+
+
+    const answer =
+        document
+        .getElementById(
+            "answer-" + id
+        )
+        .value
+        .trim();
+
+
+    if (!answer) {
+
+        alert(
+            "Please write an answer."
+        );
+
+        return;
+
+    }
+
+
+    question.answer = answer;
+
+    question.status = "Answered";
+
+
+    saveQuestions();
+
+
+    displayLeaderQuestions();
+
+
+    alert(
+        "Answer submitted successfully!"
+    );
+
+}
+
+
+
+/* =========================
+   AUTOMATIC ESCALATION
+========================= */
+
+function checkEscalation() {
+
+    const now = Date.now();
+
+
+    questions.forEach(q => {
+
+        const timePassed =
+            now - q.created;
+
+
+        /*
+          DEMO:
+          60 seconds = escalation
+        */
+
+
+        if (
+
+            timePassed > 60000 &&
+
+            q.status === "Pending"
+
+        ) {
+
+            q.status = "Escalated";
+
+            q.leader =
+                "Higher Level Leader";
+
+        }
+
+    });
+
+
+    saveQuestions();
+
+}
+
+
+
+/* =========================
+   STATUS COLOR
+========================= */
+
+function getStatusClass(status) {
+
+    if (
+        status === "Answered"
+    ) {
+
+        return "answered";
+
+    }
+
+
+    if (
+        status === "Escalated"
+    ) {
+
+        return "escalated";
+
+    }
+
+
+    return "pending";
+
+}
+
+
+
+/* =========================
+   SAVE QUESTIONS
+========================= */
+
+function saveQuestions() {
+
+    localStorage.setItem(
+
+        "questions",
+
+        JSON.stringify(questions)
+
+    );
+
+}
+
+
+
+/* =========================
+   CHECK EVERY 10 SECONDS
+========================= */
+
+setInterval(() => {
+
+    checkEscalation();
+
+    displayQuestions();
+
+}, 10000);
+
+
+
+/* =========================
+   START WEBSITE
+========================= */
+
+displayQuestions();
+
+</script>
+
+</body>
+</html>
+```
